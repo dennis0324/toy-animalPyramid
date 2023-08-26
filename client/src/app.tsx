@@ -1,7 +1,7 @@
-import * as ReactDOM from 'react-dom';
 
-function render() {
-  ReactDOM.render(<h2>Hello from React!</h2>, document.body);
-}
+import AnimalPyramid from './react/AnimalPyramid';
 
-render();
+import { createRoot } from 'react-dom/client';
+const container = document.getElementById('app');
+const root = createRoot(container); // createRoot(container!) if you use TypeScript
+root.render(<AnimalPyramid/>);
