@@ -1,5 +1,5 @@
 
-import AnimalPyramid from './react/AnimalPyramid';
+import AnimalPyramid from './animal-pyramid/AnimalPyramid';
 
 import { createRoot } from 'react-dom/client';
 const container = document.getElementById('app');
