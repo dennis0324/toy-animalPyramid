@@ -1,35 +1,27 @@
-import { DefaultEventsMap } from "socket.io/dist/typed-events";
-import Test from "./test/test";
-import { useEffect, useState } from "react";
-import { Manager, Socket } from "socket.io-client";
 import { AnimalPyramidSocket } from "@src/socket";
 import LoginPage from "./login";
+import Background from "./game-component/Background";
+import { styled } from "styled-components";
 export default function AnimalPyramid(){
-
-  // const manager= new Manager("ws://localhost:3000", {
-  //   reconnectionDelayMax: 10000,
-  // });
-
-  // const socket = manager.socket("/user");
-
-  // socket.on("connect", () => {
-  //   socket.emit('test')
-  //   socket.on('auth', (data)=>{
-  //     console.log(data)
-  //   })
-  //   socket.on('test',()=>{
-  //     console.log('test')
-  //   })
-  // })
   const Manager = new AnimalPyramidSocket()
 
   const props={
     manager:Manager
   }
 
+  const mainStyle:React.CSSProperties = {
+    display: 'absolute',
+  }
+
+  const Main = styled.main`
+    width:100vw;
+    height:100vh;
+  `
+
   return (
-    <div>
+    <Main className="main">
       <LoginPage {...props}/>
-    </div>
+      <Background/>
+    </Main>
   )
 }
