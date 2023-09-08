@@ -4,7 +4,8 @@
   "description": "server of animalPyramid",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --watch '*.ts' --exec 'ts-node' -r tsconfig-paths/register index.ts"
   },
   "keywords": [
     "animal",
@@ -20,6 +21,7 @@
     "express": "^4.18.2",
     "firebase": "^10.3.0",
     "firebase-tools": "^12.5.2",
+    "nodemon": "^3.0.1",
     "socket.io": "^4.7.2",
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.2.0",
