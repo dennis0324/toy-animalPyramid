@@ -1,0 +1,37 @@
+label.hamburger {
+  display: block;
+  background: #fff;
+  width: 40px; /* less width = square hamburger */
+  height: 60px;
+  position: relative;
+  cursor: pointer;
+}
+
+input#hamburger {
+ display:none
+}
+
+.line {
+  position: absolute;
+  height: 6px;
+  width: 100%;
+  background: #000;
+  transition: 0.5s;
+}
+/* steps of 12 are optional, could also be 10, 13 etc */
+.line:nth-child(1) { top: 12px; }
+.line:nth-child(2) { top: 24px; }
+.line:nth-child(3) { top: 36px; }
+
+/* translateY must be same as */
+#hamburger:checked + .hamburger .line:nth-child(1){
+  transform: translateY(12px) rotate(-45deg);
+}
+
+#hamburger:checked + .hamburger .line:nth-child(2){
+  opacity:0;
+}
+
+#hamburger:checked + .hamburger .line:nth-child(3){
+  transform: translateY(-12px) rotate(45deg);
+}
