@@ -17,6 +17,12 @@ export class AnimalPyramidSocket {
     return socket
   }
 
+  public getAuth() {
+    if(!this.manager) return;
+    const socket = this.manager.socket("/auth");
+    return socket
+  }
+
   public setEvent(socket:Socket<DefaultEventsMap, DefaultEventsMap>,funcArray:Function[]){
     funcArray.forEach((func) => {
       socket.on(func.name, () => func())
