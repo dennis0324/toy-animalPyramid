@@ -1,0 +1,21 @@
+
+
+.background1{
+  animation: background 80s infinite linear;
+}
+
+.background2{
+  animation: background 60s infinite linear;
+}
+
+.background3{
+  animation: background 10s infinite linear;
+}
+@keyframes background {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: calc(100vw - 100cqw)
+  }
+}
