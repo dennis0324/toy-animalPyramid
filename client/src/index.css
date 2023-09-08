@@ -6,10 +6,43 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'PFStardust';
+  src: url('./source/font/PFStardust.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
     Arial, sans-serif;
   margin: auto;
-  max-width: 38rem;
-  padding: 2rem;
+  /* max-width: 38rem; */
+  /* padding: 2rem; */
 }
+
+.starDust{
+  font-family:'PFStardust'
+}
+
+input[type=text]:focus{
+  outline: none;     /* oranges! yey */
+}
+input[type=password]:focus{
+  outline: none;     /* oranges! yey */
+}
+
+/* this css is for design for button svg*/
+.attribute{
+  color:#aaa;
+  margin-top:40px;
+}
+
+.attribute > a{
+  text-decoration: underline;
+}
+
+input:read-only{
+  color:#888
+}
+
