@@ -2,7 +2,11 @@ import { AnimalPyramidSocket } from "@src/socket";
 import LoginPage from "./login";
 import Background from "./game-component/Background";
 import { styled } from "styled-components";
+import { useState } from "react";
+import Lobby from "./lobby";
 export default function AnimalPyramid(){
+  const [isLogin,setLogin] = useState(false);
+
   const Manager = new AnimalPyramidSocket()
 
   const props={
@@ -20,8 +24,8 @@ export default function AnimalPyramid(){
 
   return (
     <Main className="main">
-      <LoginPage {...props}/>
-      <Background/>
+      {isLogin ? <Lobby {...props}/> : <LoginPage {...props}/>}
+      <Background/> 
     </Main>
   )
 }
